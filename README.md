@@ -13,8 +13,8 @@ $ docker build -t cosyvoice .
 
 $ # optional build with proxy
 $ docker build \
-        --build-arg http_proxy=[PROXY] \
-        --build-arg https_proxy=[PROXY] \
+         --build-arg http_proxy=[PROXY] \
+         --build-arg https_proxy=[PROXY] \
          -t cosyvoice .
 ```
 
