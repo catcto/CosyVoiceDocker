@@ -1,0 +1,11 @@
+services:
+  cosyvoice_server:
+    image: cosyvoice
+    container_name: cosyvoice_server
+    ports:
+      - "8080:8080"
+    restart: always
+    runtime: nvidia
+    environment:
+      NVIDIA_DRIVER_CAPABILITIES: all
+      NVIDIA_VISIBLE_DEVICES: all
