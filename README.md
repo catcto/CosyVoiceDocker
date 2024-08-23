@@ -10,12 +10,6 @@ To run this Docker container, you’ll need a machine with NVIDIA GPU support an
 
 ```shell
 $ docker build -t cosyvoice .
-
-$ # optional build with proxy
-$ docker build \
-         --build-arg http_proxy=[PROXY] \
-         --build-arg https_proxy=[PROXY] \
-         -t cosyvoice .
 ```
 
 ### Using docker command

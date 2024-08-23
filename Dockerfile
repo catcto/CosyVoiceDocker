@@ -7,12 +7,6 @@ RUN apt-get update && apt-get install -y \
     bash \
     vim
 
-# Set proxy
-ARG http_proxy=""
-ARG https_proxy=""
-ENV http_proxy=${http_proxy}
-ENV https_proxy=${https_proxy}
-
 # Install Miniconda
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
     && mkdir /root/.conda \
