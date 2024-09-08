@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.3.2-cudnn9-runtime-ubuntu22.04 as base
+FROM nvidia/cuda:12.3.2-cudnn9-runtime-ubuntu22.04 AS base
 RUN apt-get update && apt-get install -y \
     ffmpeg \
     tar \
@@ -29,6 +29,6 @@ ENV API_PORT=8080
 
 # Run
 COPY download_model.py .
-COPY api.py .
 RUN python download_model.py
-# CMD python api.py
+COPY api.py .
+CMD ["python", "api.py"]

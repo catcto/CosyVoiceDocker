@@ -48,5 +48,9 @@ $ docker compose up -d
 To test the API, use `curl`:
 
 ```shell
-$ curl -X POST http://127.0.0.1:8080/api/v1/asr -H "Content-Type: application/json" -d '{"url": "https://isv-data.oss-cn-hangzhou.aliyuncs.com/ics/MaaS/ASR/test_audio/vad_example.wav", "language": "auto"}'
+curl -X POST \
+  "http://127.0.0.1:8080/v1/tts" \
+  -F "text=你好，欢迎使用语音合成服务" \
+  -F "spk=中文女" \
+  --output output.wav
 ```
